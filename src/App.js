@@ -12,6 +12,10 @@ import SignUp from "./Pages/SignUp";
 import Category from "./Pages/Category";
 import CreateListing from "./Pages/CreateListing";
 import LikeButton from "./Pages/LikeButton";
+import Listing from "./Pages/Listing";
+import Testing from "./Pages/Testing";
+import Contact from "./Pages/Contact";
+import EditListing from "./Pages/EditListing";
 
 function App() {
   return (
@@ -28,7 +32,13 @@ function App() {
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/create-listing" element={<CreateListing />} />
-          <Route path="/testing" element={<LikeButton />} />
+          <Route path="/edit-listing/:listingId" element={<EditListing />} />
+
+          <Route path="/contact/:landlordId" element={<Contact />} />
+          <Route
+            path="/category/:categoryName/:listingId"
+            element={<Listing />}
+          />
         </Routes>
         <Navbar />
       </Router>
